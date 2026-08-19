@@ -1,0 +1,249 @@
+/* Jeane Matos House Clean — small additions on top of the Cleanify template */
+
+.results-section {
+  padding: 120px 0;
+  background: var(--theme-color-lighter, #F6F8F3);
+}
+@media (max-width: 991.98px) {
+  .results-section { padding: 80px 0; }
+}
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+@media (max-width: 991.98px) {
+  .ba-grid { grid-template-columns: 1fr; }
+}
+
+.ba-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,.07);
+}
+.ba-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.ba-shot {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+.ba-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ba-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #fff;
+}
+.ba-tag.antes { background: rgba(20,20,20,.72); }
+.ba-tag.depois { background: var(--theme-color1); }
+.ba-caption {
+  padding: 20px 22px 24px;
+}
+.ba-caption h4 {
+  margin: 0 0 4px;
+  font-size: 19px;
+  font-weight: 700;
+}
+.ba-caption p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--theme-color-gray, #505050);
+}
+
+.value-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 26px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+.value-card h6 {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+.value-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--theme-color-gray, #505050);
+}
+
+.contact-info-card {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,.06);
+  border-radius: 34px;
+  padding: 44px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 26px;
+}
+.contact-info-card .row-label {
+  display: block;
+  color: rgba(255, 255, 255, .92);
+  opacity: 1;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: 8px;
+}
+.contact-info-card a,
+.contact-info-card .row-value {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  word-break: break-word;
+}
+@media (max-width: 575.98px) {
+  .contact-info-card { min-height: 0; }
+}
+
+/* Native selects do not inherit the contact section's visual language. Keep
+   the closed control consistent with the glass card while retaining the
+   browser's accessible option list and keyboard behavior. */
+.contact-section .contact-form .frm-field h6 {
+  color: rgba(255, 255, 255, .92);
+}
+
+.contact-section .contact-form select {
+  width: 100%;
+  min-height: 60px;
+  padding: 0 56px 0 22px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 12px;
+  outline: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, .08);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23FFFFFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: border-color 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.contact-section .contact-form select:hover {
+  border-color: rgba(255, 255, 255, .52);
+  background-color: rgba(255, 255, 255, .12);
+}
+
+.contact-section .contact-form select:focus-visible {
+  border-color: var(--theme-color3, #f2b84b);
+  box-shadow: 0 0 0 3px rgba(242, 184, 75, .24);
+}
+
+.contact-section .contact-form select option {
+  background-color: #173d20;
+  color: #fff;
+}
+
+.banner-section .hero-thumb .image1 img,
+.service-block .inner-block .image img {
+  object-fit: cover;
+}
+
+.mobile-menu-toggle-icon {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+body { overflow-x: hidden; }
+
+/* The Cleanify script owns the scroll state on the header wrapper, not on
+   .header-lower. Keep one fixed header so the contact controls stay in the
+   same visual context and are not layered beneath a second sticky header. */
+.header-style-one.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(246, 248, 243, .96);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(23, 61, 50, .1);
+  z-index: 99999;
+}
+
+.header-style-one.fixed-header .sticky-header {
+  display: none;
+}
+
+.header-style-one.fixed-header .header-phone_box .text,
+.header-style-one.fixed-header .header-phone_box .number {
+  color: var(--theme-color-dark);
+}
+
+.header-style-one .language-switch {
+  color: rgba(23, 61, 50, .72);
+}
+
+.header-style-one .language-switch button.is-active {
+  color: var(--theme-color1);
+}
+
+.header-style-one .language-switch button.is-inactive {
+  color: rgba(23, 61, 50, .72);
+}
+
+.header-style-one.fixed-header .language-switch button.is-active,
+.header-style-one.fixed-header .language-switch button.is-inactive {
+  color: var(--theme-color-dark);
+}
+
+.header-style-one.fixed-header .language-switch button.is-active {
+  color: var(--theme-color1);
+}
+
+/* Keep template image columns bounded when a portrait work photo is used.
+   The original Cleanify layout relies on an intrinsic landscape image height,
+   which leaves the 100%-height image without a containing height on desktop. */
+@media (min-width: 576px) {
+  .about-section .image-column .inner-column {
+    height: clamp(360px, 42vw, 620px);
+  }
+
+  .about-section .image-column .image,
+  .about-section .image-column .image img {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .why-choose-us-section .image-column .inner-column {
+    height: clamp(420px, 42vw, 620px);
+  }
+
+  .why-choose-us-section .image-column .inner-column .image,
+  .why-choose-us-section .image-column .inner-column .image img {
+    height: 100%;
+  }
+}

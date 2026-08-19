@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jeane Matos House Clean | Thoughtful residential cleaning",
-  description: "A cleaner home and a lighter everyday with Jeane Matos House Clean.",
+  title: "Jeane Matos House Clean | Limpeza residencial com cuidado pessoal",
+  description: "Limpeza residencial cuidadosa com a Jeane Matos House Clean, em Sarasota, FL.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
