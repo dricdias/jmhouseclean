@@ -15,3 +15,26 @@
 @media (max-width:900px) { .desktop-nav { display:none; } .hero { grid-template-columns:1fr; padding-top:20px; } .hero-copy { padding-left:0; } .hero-visual { min-height:460px; } .section-grid,.contact-section { grid-template-columns:1fr; } .proof-copy { order:-1; padding-bottom:0; } .process-grid { gap:35px; grid-template-columns:1fr; } .process-step p { max-width:420px; } .work-1 { height:470px; } .work-1,.work-2,.work-3,.work-4,.work-5,.work-6 { grid-column:span 6; grid-row:auto; } .work-heading { align-items:start; flex-direction:column; gap:10px; } }
 @media (max-width:600px) { .site-header { padding:22px 20px; } .header-call { font-size:0; gap:0; padding:13px; } .header-call span { font-size:1rem; } .hero { display:block; margin-top:0; padding:35px 20px 75px; } h1 { font-size:clamp(3.7rem,17vw,6rem); } .hero-visual { margin-top:48px; min-height:450px; } .hero-stamp { font-size:.9rem; padding:28px 20px; } .hero-note { margin-top:50px; } .section-grid { padding:80px 20px 100px; } .proof-visual img { height:480px; } .floating-caption { right:-8px; } .services-section,.process-section,.work-section { padding:85px 20px 95px; } h2 { font-size:clamp(3rem,14vw,5rem); } .service-list { margin-top:55px; } .service-row { align-items:start; gap:12px; grid-template-columns:43px 1fr 28px; } .service-row p { grid-column:2 / 3; } .service-row h3 { font-size:1.45rem; } .service-row a { grid-column:3; grid-row:1; } .work-grid { gap:10px; } .work-1,.work-2,.work-3,.work-4,.work-5,.work-6 { grid-column:span 6; } .work-1 { height:380px; } .work-image img { min-height:180px; } .contact-section { padding:90px 20px 80px; } footer { align-items:start; flex-direction:column; gap:22px; padding:28px 20px; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+
+/* K390-inspired centered hero: solid brand field with an overlapping service rail. */
+.hero { display:block; margin:0 auto; max-width:none; min-height:0; padding:0 0 120px; }
+.hero-shell { background:var(--forest); color:var(--ivory); padding:112px 5vw 245px; }
+.hero-copy { margin:0 auto; max-width:760px; padding:0; text-align:center; }
+.hero-copy .eyebrow { color:var(--lime); }
+.hero-copy h1 { font-size:clamp(4rem,8vw,8rem); margin:0 auto 28px; max-width:780px; }
+.hero-intro { color:rgba(246,244,238,.72); margin-left:auto; margin-right:auto; }
+.hero-actions { justify-content:center; margin-top:35px; }
+.hero-actions .text-link { border-bottom-color:rgba(246,244,238,.55); color:var(--ivory); }
+.hero-actions .text-link:hover { color:var(--lime); }
+.hero-note { justify-content:center; margin-top:60px; }
+.hero-services { display:grid; gap:28px; grid-template-columns:repeat(3,1fr); margin:-145px auto 0; max-width:1180px; padding:0 5vw; position:relative; }
+.hero-service { background:var(--ivory); box-shadow:0 12px 35px rgba(23,61,50,.08); color:var(--forest); min-height:300px; padding:30px 30px 25px; position:relative; }
+.hero-service:nth-child(2) { transform:translateY(22px); }
+.hero-service:nth-child(3) { transform:translateY(44px); }
+.hero-service-number { color:var(--moss); display:block; font-family:Oswald,sans-serif; font-size:2.5rem; }
+.hero-service h3 { font-family:Oswald,sans-serif; font-size:1.55rem; font-weight:500; line-height:1; margin:32px 0 14px; text-transform:uppercase; }
+.hero-service p { color:rgba(41,48,44,.68); font-size:.83rem; line-height:1.55; margin:0; max-width:235px; }
+.hero-service a { align-items:center; background:var(--lime); border-radius:50%; bottom:25px; display:flex; height:34px; justify-content:center; position:absolute; right:25px; width:34px; }
+.hero-visual { display:none; }
+@media (max-width:900px) { .hero-shell { padding-bottom:220px; } .hero-services { gap:14px; grid-template-columns:1fr; margin-top:-185px; } .hero-service,.hero-service:nth-child(2),.hero-service:nth-child(3) { min-height:220px; transform:none; } .hero-service h3 { margin-top:20px; } }
+@media (max-width:600px) { .hero { padding-bottom:85px; } .hero-shell { padding:80px 20px 230px; } .hero-copy h1 { font-size:clamp(3.5rem,16vw,6rem); } .hero-note { align-items:flex-start; flex-wrap:wrap; line-height:1.4; margin-top:48px; } .hero-services { margin-top:-195px; padding:0 20px; } .hero-service { min-height:205px; padding:25px; } }
