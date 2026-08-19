@@ -38,3 +38,15 @@
 .hero-visual { display:none; }
 @media (max-width:900px) { .hero-shell { padding-bottom:220px; } .hero-services { gap:14px; grid-template-columns:1fr; margin-top:-185px; } .hero-service,.hero-service:nth-child(2),.hero-service:nth-child(3) { min-height:220px; transform:none; } .hero-service h3 { margin-top:20px; } }
 @media (max-width:600px) { .hero { padding-bottom:85px; } .hero-shell { padding:80px 20px 230px; } .hero-copy h1 { font-size:clamp(3.5rem,16vw,6rem); } .hero-note { align-items:flex-start; flex-wrap:wrap; line-height:1.4; margin-top:48px; } .hero-services { margin-top:-195px; padding:0 20px; } .hero-service { min-height:205px; padding:25px; } }
+
+.hero-service { cursor:pointer; transition:box-shadow .45s cubic-bezier(.2,.75,.25,1), transform .45s cubic-bezier(.2,.75,.25,1), background-color .3s ease; }
+.hero-service:hover { background:#fffefa; box-shadow:0 28px 55px rgba(23,61,50,.2); transform:translateY(-12px) rotate(-.35deg); }
+.hero-service:nth-child(2):hover { transform:translateY(10px) rotate(.35deg); }
+.hero-service:nth-child(3):hover { transform:translateY(32px) rotate(-.35deg); }
+.hero-service-number,.hero-service h3,.hero-service p { transition:color .3s ease, transform .4s cubic-bezier(.2,.75,.25,1); }
+.hero-service:hover .hero-service-number { color:var(--forest); transform:translateX(5px); }
+.hero-service:hover h3 { color:var(--moss); transform:translateX(5px); }
+.hero-service:hover p { color:var(--ink); transform:translateX(5px); }
+.hero-service a { transition:background-color .3s ease, color .3s ease, transform .4s cubic-bezier(.2,.75,.25,1); }
+.hero-service:hover a { background:var(--forest); color:var(--lime); transform:rotate(45deg) scale(1.12); }
+@media (prefers-reduced-motion:reduce) { .hero-service:hover,.hero-service:nth-child(2):hover,.hero-service:nth-child(3):hover { transform:none; } }
